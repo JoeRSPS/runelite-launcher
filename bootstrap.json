@@ -1,10 +1,10 @@
 {
     "artifacts": [
         {
-            "hash": "6780e47b68eb2c456b7a62cc705e019ebc7394711ca3c1d0f4c6332b1c8942f5",
+            "hash": "7E43ACCDCB72FCFA7E02AF772BA2FF80FC789F28BCCCA598ACC1FA0D62C15EF7",
             "name": "Elaro.jar",
-            "path": "https://elarorspsofficial.github.io/runelite-launcher/Elaro.jar",
-            "size": 41947769
+            "path": "https://joersps.github.io/runelite-launcher/Elaro.jar",
+            "size": 41947912
         }
     ],
     "clientJvm17Arguments": [
