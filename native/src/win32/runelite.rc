@@ -11,9 +11,9 @@ BEGIN
     BEGIN
         BLOCK "040904B0"
         BEGIN
-            VALUE "FileDescription",  "Elaro"
-            VALUE "OriginalFilename", "Elaro.exe"
-            VALUE "ProductName",      "Elaro Launcher"
+            VALUE "FileDescription",  "Elyra"
+            VALUE "OriginalFilename", "Elyra.exe"
+            VALUE "ProductName",      "Elyra Launcher"
         END
     END
 

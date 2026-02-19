@@ -88,8 +88,8 @@ class ForkLauncher
 			case MacOS:
 				path = Paths.get(current.info().command().get());
 				// on macOS packr changes the cwd to the resource directory prior to launching the JVM,
-				// causing current.info().command() to return /Applications/Elaro.app/Contents/Resources/./Elaro
-				// despite the executable really being at /Applications/Elaro.app/Contents/MacOS/Elaro
+				// causing current.info().command() to return /Applications/Elyra.app/Contents/Resources/./Elyra
+				// despite the executable really being at /Applications/Elyra.app/Contents/MacOS/Elyra
 				path = path.normalize()
 					.resolveSibling(Path.of("..", "MacOS", path.getFileName().toString()))
 					.normalize();

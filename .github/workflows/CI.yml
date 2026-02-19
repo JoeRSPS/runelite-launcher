@@ -58,9 +58,9 @@ jobs:
       with:
         name: windows
         path: |
-          ElaroSetup.exe
-          ElaroSetup32.exe
-          ElaroSetupAArch64.exe
+          ElyraSetup.exe
+          ElyraSetup32.exe
+          ElyraSetupAArch64.exe
         if-no-files-found: error
   linux:
     runs-on: ubuntu-24.04
@@ -83,7 +83,7 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: jar
-        path: build/libs/Elaro.jar
+        path: build/libs/Elyra.jar
         if-no-files-found: error
     - uses: actions/upload-artifact@v4
       with:
@@ -92,8 +92,8 @@ jobs:
           appimagetool-x86_64.AppImage
           runtime-x86_64
           runtime-aarch64
-          Elaro.AppImage
-          Elaro-aarch64.AppImage
+          Elyra.AppImage
+          Elyra-aarch64.AppImage
         if-no-files-found: error
   macos:
     runs-on: macos-13
@@ -128,13 +128,13 @@ jobs:
       run: ./build-osx-aarch64.sh --build --dmg
     # tar app to keep permissions correct
     - name: tar app
-      run: tar -cf app.tar build/macos-x64/Elaro.app build/macos-aarch64/Elaro.app build-osx-x64.sh build-osx-aarch64.sh osx/signing.entitlements
+      run: tar -cf app.tar build/macos-x64/Elyra.app build/macos-aarch64/Elyra.app build-osx-x64.sh build-osx-aarch64.sh osx/signing.entitlements
     - uses: actions/upload-artifact@v4
       with:
         name: macos-dmg
         path: |
-          Elaro-x64.dmg
-          Elaro-aarch64.dmg
+          Elyra-x64.dmg
+          Elyra-aarch64.dmg
         if-no-files-found: error
     - uses: actions/upload-artifact@v4
       with:

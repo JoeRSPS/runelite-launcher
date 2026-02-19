@@ -1,10 +1,10 @@
 [Setup]
-AppName=Elaro Launcher
-AppPublisher=Elaro
-UninstallDisplayName=Elaro
+AppName=Elyra Launcher
+AppPublisher=Elyra
+UninstallDisplayName=Elyra
 AppVersion=${project.version}
-AppSupportURL=https://elaro-ps.com
-DefaultDirName={localappdata}\Elaro
+AppSupportURL=https://elyra-ps.com
+DefaultDirName={localappdata}\Elyra
 
 ; ~30 mb for the repo the launcher downloads
 ExtraDiskSpaceRequired=30000000
@@ -13,43 +13,43 @@ PrivilegesRequired=lowest
 
 WizardSmallImageFile=${project.projectDir}/innosetup/runelite_small.bmp
 SetupIconFile=${project.projectDir}/innosetup/runelite.ico
-UninstallDisplayIcon={app}\Elaro.exe
+UninstallDisplayIcon={app}\Elyra.exe
 
 Compression=lzma2
 SolidCompression=yes
 
 OutputDir=${project.projectDir}
-OutputBaseFilename=ElaroSetupAArch64
+OutputBaseFilename=ElyraSetupAArch64
 
 [Tasks]
 Name: DesktopIcon; Description: "Create a &desktop icon";
 
 [Files]
-Source: "${project.projectDir}\build\win-aarch64\Elaro.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "${project.projectDir}\build\win-aarch64\Elaro.jar"; DestDir: "{app}"
+Source: "${project.projectDir}\build\win-aarch64\Elyra.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "${project.projectDir}\build\win-aarch64\Elyra.jar"; DestDir: "{app}"
 Source: "${project.projectDir}\build\win-aarch64\launcher_aarch64.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "${project.projectDir}\build\win-aarch64\config.json"; DestDir: "{app}"
 Source: "${project.projectDir}\build\win-aarch64\jre\*"; DestDir: "{app}\jre"; Flags: recursesubdirs
 
 [Icons]
 ; start menu
-Name: "{userprograms}\Elaro\Elaro"; Filename: "{app}\Elaro.exe"
-Name: "{userprograms}\Elaro\Elaro (configure)"; Filename: "{app}\Elaro.exe"; Parameters: "--configure"
-Name: "{userprograms}\Elaro\Elaro (safe mode)"; Filename: "{app}\Elaro.exe"; Parameters: "--safe-mode"
-Name: "{userdesktop}\Elaro"; Filename: "{app}\Elaro.exe"; Tasks: DesktopIcon
+Name: "{userprograms}\Elyra\Elyra"; Filename: "{app}\Elyra.exe"
+Name: "{userprograms}\Elyra\Elyra (configure)"; Filename: "{app}\Elyra.exe"; Parameters: "--configure"
+Name: "{userprograms}\Elyra\Elyra (safe mode)"; Filename: "{app}\Elyra.exe"; Parameters: "--safe-mode"
+Name: "{userdesktop}\Elyra"; Filename: "{app}\Elyra.exe"; Tasks: DesktopIcon
 
 [Run]
-Filename: "{app}\Elaro.exe"; Parameters: "--postinstall"; Flags: nowait
-Filename: "{app}\Elaro.exe"; Description: "&Open Elaro"; Flags: postinstall skipifsilent nowait
+Filename: "{app}\Elyra.exe"; Parameters: "--postinstall"; Flags: nowait
+Filename: "{app}\Elyra.exe"; Description: "&Open Elyra"; Flags: postinstall skipifsilent nowait
 
 [InstallDelete]
 ; Delete the old jvm so it doesn't try to load old stuff with the new vm and crash
 Type: filesandordirs; Name: "{app}\jre"
 ; previous shortcut
-Type: files; Name: "{userprograms}\Elaro.lnk"
+Type: files; Name: "{userprograms}\Elyra.lnk"
 
 [UninstallDelete]
-Type: filesandordirs; Name: "{%USERPROFILE}\.elaro\repository2"
+Type: filesandordirs; Name: "{%USERPROFILE}\.elyra\repository2"
 ; includes install_id, settings, etc
 Type: filesandordirs; Name: "{app}"
 
@@ -58,7 +58,7 @@ Root: HKCU; Subkey: "Software\Classes\runelite-jav"; ValueType: string; ValueNam
 Root: HKCU; Subkey: "Software\Classes\runelite-jav"; ValueType: string; ValueName: "URL Protocol"; ValueData: ""; Flags: uninsdeletekey
 Root: HKCU; Subkey: "Software\Classes\runelite-jav\shell"; Flags: uninsdeletekey
 Root: HKCU; Subkey: "Software\Classes\runelite-jav\shell\open"; Flags: uninsdeletekey
-Root: HKCU; Subkey: "Software\Classes\runelite-jav\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\Elaro.exe"" ""%1"""; Flags: uninsdeletekey
+Root: HKCU; Subkey: "Software\Classes\runelite-jav\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\Elyra.exe"" ""%1"""; Flags: uninsdeletekey
 
 [Code]
 #include "upgrade.pas"

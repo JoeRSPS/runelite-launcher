@@ -1,6 +1,6 @@
 {
   "classPath": [
-    "Elaro.jar"
+    "Elyra.jar"
   ],
   "mainClass": "net.runelite.launcher.Launcher",
   "vmArgs": [

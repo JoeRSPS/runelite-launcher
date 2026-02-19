@@ -5,7 +5,7 @@ else()
 endif()
 
 add_executable(packr WIN32 packr.cpp)
-set_target_properties(packr PROPERTIES OUTPUT_NAME "Elaro")
+set_target_properties(packr PROPERTIES OUTPUT_NAME "Elyra")
 if(WIN32)
     set_target_properties(packr PROPERTIES LINK_FLAGS "/LARGEADDRESSAWARE")
     target_sources(packr PUBLIC win32/packr_win32.cpp win32/runelite.manifest win32/runelite.rc)

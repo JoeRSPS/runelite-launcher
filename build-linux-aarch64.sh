@@ -3,7 +3,7 @@
 set -e
 
 echo Launcher sha256sum
-sha256sum build/libs/Elaro.jar
+sha256sum build/libs/Elyra.jar
 
 pushd native
 cmake -DCMAKE_TOOLCHAIN_FILE=arm64-linux-gcc.cmake -B build-aarch64 .
@@ -26,10 +26,10 @@ echo "$LINUX_AARCH64_CHKSUM linux_aarch64_jre.tar.gz" | sha256sum -c
 # Note: Host umask may have checked out this directory with g/o permissions blank
 chmod -R u=rwX,go=rX appimage
 # ...ditto for the build process
-chmod 644 build/libs/Elaro.jar
+chmod 644 build/libs/Elyra.jar
 
-cp native/build-aarch64/src/Elaro build/linux-aarch64/
-cp build/libs/Elaro.jar build/linux-aarch64/
+cp native/build-aarch64/src/Elyra build/linux-aarch64/
+cp build/libs/Elyra.jar build/linux-aarch64/
 cp packr/linux-aarch64-config.json build/linux-aarch64/config.json
 cp build/filtered-resources/runelite.desktop build/linux-aarch64/
 cp appimage/runelite.png build/linux-aarch64/
@@ -43,11 +43,11 @@ pushd build/linux-aarch64
 mkdir -p jre/lib/amd64/server/
 ln -s ../../server/libjvm.so jre/lib/amd64/server/ # packr looks for libjvm at this hardcoded path
 
-# Symlink AppRun -> Elaro
-ln -s Elaro AppRun
+# Symlink AppRun -> Elyra
+ln -s Elyra AppRun
 
-# Ensure Elaro is executable to all users
-chmod 755 Elaro
+# Ensure Elyra is executable to all users
+chmod 755 Elyra
 popd
 
 curl -z appimagetool-x86_64.AppImage -o appimagetool-x86_64.AppImage -L https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
@@ -58,4 +58,4 @@ chmod +x appimagetool-x86_64.AppImage
 ./appimagetool-x86_64.AppImage \
 	--runtime-file runtime-aarch64 \
 	build/linux-aarch64/ \
-	Elaro-aarch64.AppImage
+	Elyra-aarch64.AppImage

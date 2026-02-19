@@ -90,8 +90,8 @@ class Updater
 		Path path = Paths.get(command.get());
 
 		// on macOS packr changes the cwd to the resource directory prior to launching the JVM,
-		// causing current.info().command() to return /Applications/Elaro.app/Contents/Resources/./Elaro
-		// despite the executable really being at /Applications/Elaro.app/Contents/MacOS/Elaro
+		// causing current.info().command() to return /Applications/Elyra.app/Contents/Resources/./Elyra
+		// despite the executable really being at /Applications/Elyra.app/Contents/MacOS/Elyra
 		path = path.normalize()
 			.resolveSibling(Path.of("..", "MacOS", path.getFileName().toString()))
 			.normalize();
@@ -342,7 +342,7 @@ class Updater
 			return;
 		}
 
-		// the installer kills running Elaro processes, so check that there are no others running
+		// the installer kills running Elyra processes, so check that there are no others running
 		List<ProcessHandle> allProcesses = ProcessHandle.allProcesses().collect(Collectors.toList());
 		for (ProcessHandle ph : allProcesses)
 		{
