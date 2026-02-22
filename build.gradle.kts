@@ -26,7 +26,7 @@
 plugins {
     java
     application
-    id("com.gradleup.shadow") version "8.3.8"
+    id("com.gradleup.shadow") version "8.3.9"
 }
 
 repositories {
