@@ -1,0 +1,88 @@
+{
+    "artifacts": [
+        {
+            "hash": "0e720ec29100032c9cb813a06211b3964cd0f793ee8d55645b05d17cea0d457e",
+            "name": "Elyra.jar",
+            "path": "https://joersps.github.io/runelite-launcher/Elyra.jar",
+            "size": 41964966
+        }
+    ],
+    "clientJvm17Arguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500"
+    ],
+    "clientJvm17MacArguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500",
+        "--add-opens=java.desktop/com.apple.eawt=ALL-UNNAMED"
+    ],
+    "clientJvm9Arguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Drunelite.launcher.blacklistedDlls=RTSSHooks.dll,RTSSHooks64.dll,NahimicOSD.dll,NahimicMSIOSD.dll,Nahimic2OSD.dll,Nahimic2DevProps.dll,k_fps32.dll,k_fps64.dll,SS2DevProps.dll,SS2OSD.dll,GTIII-OSD64-GL.dll,GTIII-OSD64-VK.dll,GTIII-OSD64.dll",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500"
+    ],
+    "clientJvmArguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500",
+        "-Xincgc",
+        "-XX:+UseConcMarkSweepGC",
+        "-XX:+UseParNewGC"
+    ],
+    "launcherArguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Drunelite.launcher.nojvm=true",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500",
+        "-Xincgc",
+        "-XX:+UseConcMarkSweepGC",
+        "-XX:+UseParNewGC"
+    ],
+    "launcherJvm11Arguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Drunelite.launcher.nojvm=true",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500"
+    ],
+    "launcherJvm11WindowsArguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Drunelite.launcher.nojvm=true",
+        "-Drunelite.launcher.blacklistedDlls=RTSSHooks.dll,RTSSHooks64.dll,NahimicOSD.dll,NahimicMSIOSD.dll,Nahimic2OSD.dll,Nahimic2DevProps.dll,k_fps32.dll,k_fps64.dll,SS2DevProps.dll,SS2OSD.dll,GTIII-OSD64-GL.dll,GTIII-OSD64-VK.dll,GTIII-OSD64.dll",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500"
+    ],
+    "launcherJvm17Arguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Drunelite.launcher.nojvm=true",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500"
+    ],
+    "launcherJvm17MacArguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Drunelite.launcher.nojvm=true",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500",
+        "--add-opens=java.desktop/com.apple.eawt=ALL-UNNAMED"
+    ],
+    "launcherJvm17WindowsArguments": [
+        "-XX:+DisableAttachMechanism",
+        "-Drunelite.launcher.nojvm=true",
+        "-Drunelite.launcher.blacklistedDlls=RTSSHooks.dll,RTSSHooks64.dll,NahimicOSD.dll,NahimicMSIOSD.dll,Nahimic2OSD.dll,Nahimic2DevProps.dll,k_fps32.dll,k_fps64.dll,SS2DevProps.dll,SS2OSD.dll,GTIII-OSD64-GL.dll,GTIII-OSD64-VK.dll,GTIII-OSD64.dll",
+        "-Xmx768m",
+        "-Xss2m",
+        "-XX:CompileThreshold=1500"
+    ],
+    "version": "1.0.0"
+}
