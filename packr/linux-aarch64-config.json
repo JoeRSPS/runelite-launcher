@@ -8,4 +8,4 @@
     "-Xss2m",
     "-XX:CompileThreshold=1500"
   ]
-}
+} 
