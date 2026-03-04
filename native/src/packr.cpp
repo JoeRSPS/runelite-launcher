@@ -42,12 +42,12 @@ static sajson::document readConfigurationFile(string fileName) {
     ifstream in(fileName.c_str(), std::ios::in | std::ios::binary);
     string content((istreambuf_iterator<char>(in)), (istreambuf_iterator<char>()));
 
-    sajson::document json = sajson::parse(sajson::literal(content.c_str()));
+    sajson::document json = sajson::parse(sajson::dynamic_allocation(), sajson::string(content.size(), content.c_str()));
     return json;
 }
 
 static bool hasJsonValue(sajson::value jsonObject, const char* key, sajson::type expectedType) {
-    size_t index = jsonObject.find_object_key(sajson::literal(key));
+    size_t index = jsonObject.find_object_key(sajson::string(strlen(key), key));
     if (index == jsonObject.get_length()) {
         return false;
     }
@@ -56,7 +56,7 @@ static bool hasJsonValue(sajson::value jsonObject, const char* key, sajson::type
 }
 
 static sajson::value getJsonValue(sajson::value jsonObject, const char* key) {
-    size_t index = jsonObject.find_object_key(sajson::literal(key));
+    size_t index = jsonObject.find_object_key(sajson::string(strlen(key), key));
     return jsonObject.get_object_value(index);
 }
 
