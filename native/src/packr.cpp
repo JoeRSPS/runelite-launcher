@@ -9,8 +9,6 @@
 #include <dropt.h>
 #include <sajson.h>
 
-namespace sajson { namespace internal { template<> const uint8_t globals_struct<void>::parse_flags[256] = {0}; } }
-
 #include <fstream>
 #include <iostream>
 #include <sstream>
